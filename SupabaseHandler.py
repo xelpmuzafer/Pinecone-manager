@@ -1,4 +1,8 @@
 import psycopg2
+    
+    
+#Add supabase connection string here
+conn_string = "<connection string>"
 
 def get_keys(namespace, group_id):
     """
@@ -12,7 +16,6 @@ def get_keys(namespace, group_id):
         list: A list of keys matching the criteria.
     """
     # Database connection string
-    conn_string = "postgresql://postgres.evrgveucnlmyrezbaqcj:Muzafer123123123#@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
 
     try:
         # Connect to the database
@@ -56,7 +59,6 @@ def get_all_group_ids(namespace):
         list: A list of all unique group_id values matching the namespace.
     """
     # Database connection string
-    conn_string = "postgresql://postgres.evrgveucnlmyrezbaqcj:Muzafer123123123#@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
 
     try:
         # Connect to the database
@@ -102,7 +104,6 @@ def delete_record_by_key(namespace, key):
         bool: True if the record was deleted successfully, False otherwise.
     """
     # Database connection string
-    conn_string = "postgresql://postgres.evrgveucnlmyrezbaqcj:Muzafer123123123#@aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres"
 
     try:
         # Connect to the database
